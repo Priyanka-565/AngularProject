@@ -1,0 +1,30 @@
+span {
+  font-size: 10px;
+  color: blue;
+}
+.input {
+  padding: 5px 5px 5px 5px;
+}
+/* label {
+  display: block;
+  margin-bottom: .1rem;
+} */
+select {
+  width: 10%;
+  padding: .5rem;
+}
+/* input.ng-invalid.ng-touched {
+  border: 1px solid red;
+} */
+
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+form-group {
+  margin-bottom: 1rem;
+}

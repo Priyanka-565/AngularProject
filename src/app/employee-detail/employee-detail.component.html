@@ -1,0 +1,42 @@
+<!-- <p>Selected Employee Detail</p> -->
+<!-- Employee Name : <input type="text" value= {{emp.employeeName}}>
+Employee Salary : <input type="text" value={{emp.Salary}}>
+Employee Dept : <input type="text" value={{emp.dept}}> -->
+
+<h1>Edit Employee</h1>
+<form (ngSubmit) = "onFormSubmit()" [formGroup]= "employeeEditForm">
+  <div class="input">
+  <label>Employee Id: </label>
+  <input type="text" formControlName="id" readonly>
+</div>
+<div class="input">
+  <label>Employee Name: </label>
+  <input type="text" formControlName="employeeName">
+  <span *ngIf="!employeeEditForm.get('employeeName').valid && employeeEditForm.get('employeeName').touched">employee name is not correct</span>
+</div>
+<div class="input">
+  <label>Salary: </label>
+  <input type="text" formControlName="Salary">
+  <span *ngIf="!employeeEditForm.get('Salary').valid && employeeEditForm.get('Salary').touched">salary is not correct</span>
+</div>
+<div class="input">
+  <label>Department: </label>
+  <select formControlName="dept">
+    <option>HR</option>
+    <option>IT</option>
+  </select>
+</div>
+<div class="input">
+  <label>Gender: </label>
+    <select formControlName="gender">
+      <option value="M">Male</option>
+      <option value ="F">Female</option>
+    </select>
+  </div>
+
+  <button type="submit">Submit</button>
+  <button type="reset" (click) ="OnCancel()">Cancel</button>
+  </form>
+
+
+
